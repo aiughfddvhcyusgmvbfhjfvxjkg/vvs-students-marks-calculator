@@ -27,7 +27,7 @@ else:
 data.append(['Total', f"{total_marks:.2f}", f"{total_max:.2f}", f"{percentage:.2f}%"])
 
     # Create table
-    table = Table(data)
+table = Table(data)
 table.setStyle(TableStyle([
         ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
         ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),

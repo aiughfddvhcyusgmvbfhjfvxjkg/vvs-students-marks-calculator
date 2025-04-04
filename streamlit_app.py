@@ -7,15 +7,15 @@ from reportlab.lib import colors
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle
 
-defgenerate_pdf(results, total_marks, total_max, percentage):
-    """Generate PDF report of marks."""
-    buffer = BytesIO()
-    doc = SimpleDocTemplate(buffer, pagesize=letter)
-    elements = []
+defgenerate_pdf(results, total_marks, total_max, percentage)
+"""Generate PDF report of marks."""
+buffer = BytesIO()
+doc = SimpleDocTemplate(buffer, pagesize=letter)
+elements = []
 
-    # Convert results to table data
-    data = [['Subject', 'Marks', 'Maximum Marks', 'Percentage']]
-    for subject, marks, max_marks in results:
+# Convert results to table data
+data = [['Subject', 'Marks', 'Maximum Marks', 'Percentage']]
+for subject, marks, max_marks in results:
 subject_percentage = calculate_percentage(marks, max_marks)
         if subject in ["Hindi", "Computer"] and st.session_state.get('converted_marks', {}).get(subject.lower()):
             original = st.session_state.converted_marks[subject.lower()]['original']

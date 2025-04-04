@@ -16,7 +16,7 @@ elements = []
 # Convert results to table data
 data = [['Subject', 'Marks', 'Maximum Marks', 'Percentage']]
 for subject, marks, max_marks in results:
-subject_percentage = calculate_percentage(marks, max_marks)
+    subject_percentage = calculate_percentage(marks, max_marks)
         if subject in ["Hindi", "Computer"] and st.session_state.get('converted_marks', {}).get(subject.lower()):
             original = st.session_state.converted_marks[subject.lower()]['original']
 data.append([subject, f"{original} → {marks:.2f}", str(max_marks), f"{subject_percentage:.2f}%"])

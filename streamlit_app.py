@@ -20,8 +20,8 @@ for subject, marks, max_marks in results:
     if subject in ["Hindi", "Computer"] and st.session_state.get('converted_marks', {}).get(subject.lower()):
         original = st.session_state.converted_marks[subject.lower()]['original']
 data.append([subject, f"{original} → {marks:.2f}", str(max_marks), f"{subject_percentage:.2f}%"])
-        else:
-data.append([subject, str(marks), str(max_marks), f"{subject_percentage:.2f}%"])
+    else:
+        data.append([subject, str(marks), str(max_marks), f"{subject_percentage:.2f}%"])
 
     # Add total and percentage
 data.append(['Total', f"{total_marks:.2f}", f"{total_max:.2f}", f"{percentage:.2f}%"])
